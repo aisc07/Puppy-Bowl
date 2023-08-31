@@ -1,10 +1,13 @@
 const playerContainer = document.getElementById('all-players-container');
+const h1 = document.createElement("h1");
+h1.textContent = "PUPPY BOWL";
+playerContainer.append(h1);
+
+const newPlayerFormContainer = document.getElementById('new-player-form');
 // const h1 = document.createElement("h1");
 // h1.textContent = "Puppy Bowl";
 // playerContainer.append(h1);
 
-
-const newPlayerFormContainer = document.getElementById('new-player-form');
 const h2 = document.createElement("h2");
 h2.textContent = "Add New Player";
 newPlayerFormContainer.append(h2);
@@ -28,7 +31,7 @@ const fetchAllPlayers = async () => {
             const responseAll =  await fetch(`${APIURL}`);
             //we need to use that data, so we need to turn it into json
             const resultAll = await responseAll.json();
-            //return that varialbe.data.players, becuase that's where the [array of puppies] is, sicne we return it, we can call thsi fetchAll fucn in other places to use it, and still get the data
+            //return that variable.data.players, becuase that's where the [array of puppies] is, since we return it, we can call this fetchAll func in other places to use it, and still get the data
             console.log(resultAll);
             return resultAll.data.players
     } catch (err) {
@@ -49,7 +52,7 @@ const fetchSinglePlayer = async (playerId) => {
 //we pass in the event 
 async function addNewPlayer (event) {
     try {
-        //we till it to not do the default, which is refresh the page
+        //we tell it to not do the default, which is refresh the page
     event.preventDefault();
     //we get the values from the input AFTER we hit submit, .value comes from the event.target.value
     const dogName = document.getElementById('name').value
@@ -67,7 +70,7 @@ async function addNewPlayer (event) {
                 'Content-Type' : 'application/json',
             },
             //request is a POST, this request has a BODY, which is where the data is stored from the CLIENT (AKA the HTML)
-            //hey turn our object into JSON, we are passing in our object into the JSON.stringify()
+            //They turn our object into JSON, we are passing in our object into the JSON.stringify()
             body: JSON.stringify({
                 name: dogName, //these values are the values from the input
                 breed: dogBreed,
@@ -76,7 +79,7 @@ async function addNewPlayer (event) {
             }
         );
         //this is done async returns us something, promise that turns the response from the POST request on line 58 into json
-        //sometiems you get teh whole OBJECT back, sometiems you get just a message saying success
+        //sometimes you get the whole OBJECT back, sometimes you get just a message saying success
         const resultAddNew = await responseAddNew.json();
         console.log(resultAddNew);
     } catch (err) {
@@ -126,12 +129,18 @@ const removePlayer = async (playerId) => {
 const renderAllPlayers = async (playerList) => {
     try {
         
-        data.players.forEach((player) =>{
-            playerContainer.innerHTML = '';
-            const play = document.createElement("id")
+        // data.players.forEach((player) =>{
+        //     playerContainer.innerHTML = "";
+        //     const img = document.createElementById("imageUrl");
+        //     const li = document.createElement("li");
+        //     li.append(img)
+           
+
             
               
-        })}
+        }
+        // )
+    // }
         
         
     catch (err) {
@@ -164,10 +173,3 @@ const init = async () => {
 init();
 // const submitButton = document.getElementById("submit").addEventListener("click",(nameInput, breedInput)=>{
 
-// const name = document.getElementById("name");
-// const breed = document.getElementById("breed");
-// name.textContent = nameInput;
-// breed.textContent = breedInput;
-// console.log(name);
-// console.log(breed);
-// })

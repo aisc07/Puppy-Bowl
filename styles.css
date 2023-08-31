@@ -8,11 +8,14 @@ body{
   background-size:cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 #playerContainer{
   color: white;
+  
 }
+
 
 
 #new-player-form{
@@ -20,14 +23,22 @@ body{
   font-size: 1.5em;
   color: white;
   text-align: center;
-  margin-top: 2.5em;
+  margin-top: 6em;
 
+}
+
+#form{
+margin-bottom: -4em;
 }
 
 input{
   height: 2em;
   width: 15em;
+  background-color:#AEE792;
+  border-color: white;
+  border-width: 0.2em;
 }
+
 #name{
   margin-bottom: 1.5em;
 }
@@ -35,16 +46,24 @@ input{
   margin-bottom: 1.5em;
 }
 #status{
-  margin-bottom: 2.5em;
+  margin-bottom: 10em
 }
 #submit{
-  font-size: 1.5em;
+  font-size: 1em;
   height: 1.5em;
   width: 4.5em;
-  background-color:#419E76 ;
+  background-color:#2B9568 ;
   color: white;
+  margin-bottom: 1em;
+  border-width: 0.01em;
 }
 
 #all-players-container{
-  font-size: 1.5em;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-shadow:#021c37 0 5px 1px; ;
+  font-size: 2.3em;
+  letter-spacing: 1.4em;
+  color: white;
+  text-align: center;
+  margin-top: -14em;
 }
