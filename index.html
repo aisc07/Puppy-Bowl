@@ -12,31 +12,59 @@
   <!-- import CSS -->
   <link rel="stylesheet" href="./styles.css">
 
-  <title>Puppy Bowl</title>
+
 </head>
 
 <body>
 
+  <div id="main-title"></div>
+
+
+
+
+
   <!-- form to add new players -->
   <div id="new-player-form">
+
     
+
     <form id="form">
+      <div id="new-player-title">
+        <div id="new-player-title1"></div>
+        <div id="new-player-title2"></div>
+      </div>
+  
+      <div class="input-group1">
+        <label for="name" id="name">name</label>
+        <br>
+        <input type="text" placeholder="player name" id="name" /><br>
 
-      <label for="name">Name:</label><br>
-      <!-- <br> -->
-      <input type="text" id="name"/><br>
-      <br>
-      <label for="breed">Breed:</label><br>
-      <!-- <br> -->
-      <input type="text" id="breed"/><br>
-      <br>
-      <label for="status">Status:</label><br>
-      <!-- <br> -->
-      <input type="text" id="status"/><br>
+        <br>
+        <label for="breed" id="breed">breed</label>
+        <br>
+        <input type="text" placeholder="type of breed" id="breed" /><br>
 
-     
+      </div>
+
+
+      <br>
+      <div class="input-group2">
+        <label for="status" id="status">status</label>
+        <br>
+        <input type="text" placeholder="field or bench" id="status" /><br>
+
+        <br>
+        <label for="image" id="image">photo</label>
+        <br>
+        <input type="text" placeholder="imageUrl" id="image" /><br>
+        <br>
+      </div>
+
+      <button id="submit" type="submit" name="submit" value="Submit">Add Pup</button>
+
     </form>
-    <input id="submit" type="submit" name="submit" value="Submit"/>
+
+
   </div>
 
 
