@@ -189,7 +189,16 @@ const renderAllPlayers = async (players) => {
 
            
         playerContainer.append(li)
-   
+
+
+        playerContainer.addEventListener("click", (e) => {
+            const playerId = Number(e.target.id.slice(5))
+            if (typeof playerId === 'number'){
+
+            }
+        })
+   //fetchplayers then render all players// single player back button and delete button then render all players onclick renderall players again. anytime you make a change, render all players
+        // `button id="see-details"-${id} class="player-btn>See Details</button>`
     });
 }
 /**
@@ -280,8 +289,8 @@ const renderNewPlayerForm = () => {
 }
 
 const init = async () => {
-    const players = await fetchAllPlayers();
-    renderAllPlayers(players);
+    const players = await fetchAllPlayers(); //gets players state object []
+    renderAllPlayers(players); //builds the DOM
 
     renderNewPlayerForm();
 }

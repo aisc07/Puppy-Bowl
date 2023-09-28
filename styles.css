@@ -148,9 +148,8 @@ input{
 /* List of Players */
 #all-players-container{
   list-style: none;
-  margin-left: 4em;
+  margin-left: 42em;
   margin-top: -10em;
-  text-align: center;
   
   /* display:flex; */
   /* flex-direction: row; */
@@ -159,26 +158,26 @@ input{
 
 img{
   border-radius: 50%;
-  border-style:dashed;
-  border-width: 0.5em;
+  border-style:solid;
+  border-width: 0.8em;
   border-color:white;
   margin-left: 5em;  
   align-items: center;
 }
 
 h3{
-  color:lightsalmon;
-  text-shadow: #021c37 0 3px 1px;
+  color:#AEE792;
+  text-shadow:#021c37 0 3px 1px;
   font-size: 2.5em;
   /* margin-top: 1.5em; */
-  margin-left: 2.5em; 
+  margin-left: 6em; 
 }
 
 p{
   font-weight: bold;
   font-size: 2em;
   text-shadow:#021c37 0 3px 1px;
-  color:lightblue;
-  margin-left: 3em;
+  color:#AEE792;
+  margin-left: 7.9em;
   margin-bottom: 2em;
 }
